@@ -1,0 +1,29 @@
+<h1>Child Component works!</h1>
+<h2>From Parent : {{name}}</h2>
+<table border="1">
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Status</td>
+      <td>Age</td>
+      <td>info</td>
+    </tr>
+    <tr>
+      <td>{{person.name | titlecase}}</td>
+      <td>{{person.title | titlecase}}</td>
+      <td>{{person.age }}</td>
+      <td>{{person.info | titlecase}}</td>
+    </tr>
+  </tbody>
+</table>
+<ng-content></ng-content>
+<div>
+  Product: <input type="text" placeholder="Name" #product />
+
+  <button (click)="add(product.value)">Emit Event</button>
+</div>
+<div>
+  <h1>identity From Login(child) Component via output {{identity}}</h1>
+</div>
+<app-login [fatherName]="parent" (motherName)="newEvent($event)"></app-login>
+<h1>{{test}}</h1>

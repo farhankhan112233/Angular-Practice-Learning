@@ -1,0 +1,6 @@
+<h1>Recieved From Slot Component via Input "{{fatherName}}"</h1>
+<div>
+  <label for="inp">Mother Name: </label>
+  <input id="inp" type="text" #name />
+  <button (click)="event(name.value)">Click to Emit</button>
+</div>
