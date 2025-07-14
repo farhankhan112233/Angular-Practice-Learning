@@ -6,10 +6,11 @@ import { ApiServiceTs } from '../Services/api.service.ts.js';
 import { Observable } from 'rxjs';
 import { RouterOutlet } from '@angular/router';
 import { Router } from 'express';
+import { ColorDirective } from './Directives/color.Directive.js';
 
 @Component({
   selector: 'app-component',
-  imports: [CommonModule, FormsModule, SingleSlotProjection],
+  imports: [CommonModule, FormsModule, SingleSlotProjection, ColorDirective],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

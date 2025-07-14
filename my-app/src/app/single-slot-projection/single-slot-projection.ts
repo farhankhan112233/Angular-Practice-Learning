@@ -46,7 +46,6 @@ export class SingleSlotProjection implements OnChanges {
   }
   ngAfterContentInit() {
     console.log('ngAfterContentInit from singleslot component');
-    console.log('checking value from Afterconeteninit', this.headTemp);
   }
   ngAfterContentChecked() {
     console.log('calling from ngaftercontentchecked');

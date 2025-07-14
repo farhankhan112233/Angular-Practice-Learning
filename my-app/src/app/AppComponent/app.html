@@ -4,7 +4,7 @@
 <ng-template #ngTemplate>
   <h2>Toggle is off</h2>
 </ng-template>
-<button (click)="onToggle()">Toggle</button>
+<button elementColor (click)="onToggle()">Toggle</button>
 
 <div class="head">
   Status:
@@ -12,9 +12,9 @@
   Name:
   <input type="text" [(ngModel)]="info.name" />
 </div>
-<button (click)="show()">Click to Toggle Text</button><br />
+<button elementColor (click)="show()">Click to Toggle Text</button><br />
 
-<div [hidden]="info.display" class="hide">
+<div elementColor [hidden]="info.display" class="hide">
   <p>Hello Farhan Khan</p>
 </div>
 <div class="two way">
@@ -25,7 +25,7 @@
 </div>
 
 <h1 *ngIf="sale">{{sale | titlecase}}</h1>
-<button [disabled]="info.age < 18? true : false ">Like</button>
+<button elementColor [disabled]="info.age < 18? true : false ">Like</button>
 <hr />
 <app-single-slot-projection
   *ngIf="toDestroy"
@@ -36,7 +36,7 @@
 >
   <p #temp>Hello Content Projection</p></app-single-slot-projection
 ><br /><br />
-<button (click)="destroy()">Destroy/Show</button>
+<button elementColor (click)="destroy()">Destroy/Show</button>
 <hr />
 
 <div class="product" *ngIf="product()">
@@ -49,12 +49,12 @@
   <p><strong>Price: {{product().price}} </strong></p>
   <p><b>Rating: </b>{{product().rating.rate}}</p>
 </div>
-<button (click)="data()">Click to fetch</button>
+<button elementColor (click)="data()">Click to fetch</button>
 <h1>Observable</h1>
 <div>{{observable()}}</div>
-<button (click)="sub()">Click To Sub</button
-><button (click)="unsub()">Click To unSub</button>
+<button elementColor (click)="sub()">Click To Sub</button
+><button elementColor (click)="unsub()">Click To unSub</button>
 <div class="container">
   <input type="text" #input />
-  <button id="btnn" (click)="edit(input.value)">Click</button>
+  <button elementColor id="btnn" (click)="edit(input.value)">Click</button>
 </div>
